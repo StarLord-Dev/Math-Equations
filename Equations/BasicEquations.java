@@ -4,6 +4,7 @@ import java.math.*;
 
 public class BasicEquations {
 
+	//Obtiene el peso del objeto con la formula basica
 	public double getWeight(double dough, double gravity) {		
 		
 		double weight=dough*gravity;
@@ -17,5 +18,7 @@ public class BasicEquations {
 		return force;
 				
 	}
+	
+	
 	
 }

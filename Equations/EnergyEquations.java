@@ -2,8 +2,9 @@ package Equations;
 
 import java.math.*;
 
-public class CompositeEquations {
+public class EnergyEquations {
 
+	//Devuelve la energia cinetica
 	public double getKineticEnergy(double dough, double speed) {
 		
 		double KE=0.5*dough*Math.pow(speed, 2);
@@ -11,7 +12,7 @@ public class CompositeEquations {
 		
 	}
 	
-	//Duevuelve la energia 
+	//Duevuelve la energia potencial
 	public double getPotentialEnergy(double dough, double height, double gravity) {
 		
 		double PE=dough*gravity*height;
@@ -22,8 +23,7 @@ public class CompositeEquations {
 	//Devuelve la energia mecanica a partir de los datos base de la energia mecanica y la energia cinetica
 	public double getMechanicalEnergy(double dough, double speed, double height, double gravity) {
 		
-		double ME=dough*((0.5*Math.pow(speed, 2))+(gravity*height));
-		
+		double ME=dough*((0.5*Math.pow(speed, 2))+(gravity*height));	
 		return ME;
 		
 	}
@@ -33,7 +33,6 @@ public class CompositeEquations {
 		
 		double PE=dough*gravity*height;		
 		double ME=KE+PE;
-		
 		return ME;
 		
 	}
@@ -43,7 +42,6 @@ public class CompositeEquations {
 		
 		double KE=0.5*dough*Math.pow(speed, 2);	
 		double ME=KE+PE;
-		
 		return ME;
 		
 	}
@@ -56,11 +54,14 @@ public class CompositeEquations {
 		
 	}
 	
+	//Devuelve la energia potencial basado en el peso del anjeto y la altura como datos
 	public double getPEBasedInWeight(double weight, double height) {
 		
 		double PE=weight*height;
 		return PE;
 		
 	}
+	
+	
 	
 }
